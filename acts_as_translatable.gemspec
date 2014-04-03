@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'acts_as_translatable_4/version'
+require 'acts_as_translatable/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "acts_as_translatable_4"
-  spec.version       = ActsAsTranslatable4::VERSION
+  spec.name          = "acts_as_translatable"
+  spec.version       = ActsAsTranslatable::VERSION
   spec.authors       = ["Stjepan Hadjic"]
   spec.email         = ["d4be4st@gmail.com"]
   spec.summary       = %q{}

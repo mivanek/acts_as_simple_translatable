@@ -1,4 +1,4 @@
-module ActsAsTranslatable4
+module ActsAsTranslatable
   module ClassMethods
     def acts_as_translatable_on(*fields)
       after_initialize :translations
