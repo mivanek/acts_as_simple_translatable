@@ -1,3 +1,3 @@
-class RecordTranslation < ActiveRecord::Base
+class Translation < ActiveRecord::Base
   belongs_to :translatable, polymorphic: true
 end
