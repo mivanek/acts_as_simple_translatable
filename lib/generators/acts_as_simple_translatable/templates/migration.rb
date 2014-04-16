@@ -7,6 +7,7 @@ class CreateTranslations < ActiveRecord::Migration
       t.string :translatable_field, required: true
       t.string :locale, length: 5, required: true
       t.text :content
+      t.timestamps
     end
 
     # add index
