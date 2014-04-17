@@ -1,7 +1,7 @@
 # ActsAsSimpleTranslatable
 
 
-TODO: Write a gem description
+Adds translation table, and helpers to work with model translations
 
 ## Installation
 
@@ -17,13 +17,37 @@ Or install it yourself as:
 
     $ gem install acts_as_simple_translatable
 
+## Configuration
+
+This will create a translations table
+
+    $ rails generate acts_as_simple_translatable:install
+
+To add translation to your model just add to your model:
+
+    acts_as_simple_translatable_on :name, :description
+
+Add to application rb
+    
+    I18n.avaliable_locales = ['en', 'de']
+
 ## Usage
 
-TODO: Write usage instructions here
+    m = Model.create(name: 'name', descritpion: 'description' )
+    m.translations.create(locale: 'de', tanslatable_field: 'name', content: 'name_in_de')
 
+    I18n.locale = 'de'
+    m.name                    #=> 'name_in_de'
+    m.description             #=> ''
+    m.description(:original)  #=> 'description'
+    
+You also have the access to list of translatable fields:
+
+    Model.locale_fields       #=> ['name', 'description']
+    
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/acts_as_simple_translatable/fork )
+1. Fork it ( http://github.com/d4be4st/acts_as_simple_translatable/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
