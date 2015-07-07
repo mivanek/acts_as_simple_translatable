@@ -1,6 +1,5 @@
 # ActsAsSimpleTranslatable
 
-
 Adds translation table, and helpers to work with model translations
 
 ## Installation
@@ -28,7 +27,7 @@ To add translation to your model just add to your model:
     acts_as_simple_translatable_on :name, :description
 
 Add to application rb
-    
+
     I18n.avaliable_locales = ['en', 'de']
 
 ## Usage
@@ -39,12 +38,13 @@ Add to application rb
     I18n.locale = 'de'
     m.name                    #=> 'name_in_de'
     m.description             #=> ''
-    m.description(:original)  #=> 'description'
-    
+
+Default locale content will be saved in original field in table (e.g. in table `Model`, attribute `name`) while for other locales content will be saved in `translations` table.
+
 You also have the access to list of translatable fields:
 
-    Model.locale_fields       #=> ['name', 'description']
-    
+    Model.locale_fields       #=> [:name, :description]
+
 ## Contributing
 
 1. Fork it ( http://github.com/d4be4st/acts_as_simple_translatable/fork )
