@@ -1,7 +1,6 @@
-require "rails/generators"
+require 'rails/generators'
 
 module ActsAsSimpleTranslatable
-
   module Generators
     class InstallGenerator < Rails::Generators::Base
       include Rails::Generators::Migration

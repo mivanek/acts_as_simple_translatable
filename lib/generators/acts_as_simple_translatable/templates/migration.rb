@@ -11,6 +11,6 @@ class CreateTranslations < ActiveRecord::Migration
     end
 
     # add index
-    add_index :translations, [:translatable_id, :translatable_type, :locale], name: "record_translations_index"
+    add_index :translations, [:translatable_id, :translatable_type, :locale], name: 'record_translations_index'
   end
 end
