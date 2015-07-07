@@ -45,6 +45,16 @@ You also have the access to list of translatable fields:
 
     Model.locale_fields       #=> [:name, :description]
 
+You can access to original field by prepending `_original` to attribute name:
+
+    description_original
+
+Also, when you accessing to attribute and there is no translation for it, you can define custom message or default message will be returned.
+
+    my_model.name     # => 'NO TRANSLATION' <-- default message
+
+    my_model.name('You need translate this')    # => 'You need translate this' <-- custom message
+
 ## Contributing
 
 1. Fork it ( http://github.com/d4be4st/acts_as_simple_translatable/fork )
