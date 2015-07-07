@@ -18,6 +18,10 @@ module ActsAsSimpleTranslatable
           content.present? ? content : default_message
         end
 
+        define_method "#{field}_original" do
+          super()
+        end
+
         define_method "#{field}?" do
           !send("#{field}").blank?
         end
