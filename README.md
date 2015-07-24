@@ -1,5 +1,7 @@
 # ActsAsSimpleTranslatable
 
+[![Gem Version](https://badge.fury.io/rb/acts_as_simple_translatable.svg)](http://badge.fury.io/rb/acts_as_simple_translatable)
+
 Adds translation table, and helpers to work with model translations
 
 ## Installation
