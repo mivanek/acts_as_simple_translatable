@@ -19,7 +19,7 @@ module ActsAsSimpleTranslatable
         end
 
         define_method "#{field}_original" do
-          super()
+          self[field]
         end
 
         define_method "#{field}?" do
